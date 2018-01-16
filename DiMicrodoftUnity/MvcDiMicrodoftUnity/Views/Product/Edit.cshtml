@@ -1,0 +1,48 @@
+﻿@model MvcDiMicrodoftUnity.Product
+@{
+    ViewBag.Title = "Edit";
+}
+<h2>
+    Edit</h2>
+<script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@using (Html.BeginForm())
+{
+    <div style="color: Green; font-weight: bold">
+        @ViewBag.Msg
+    </div>
+    @Html.ValidationSummary(true)
+    
+    <fieldset>
+        <legend>Person</legend>
+        @Html.HiddenFor(model => model.CustID)
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Address)
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ContactNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ContactNo)
+            @Html.ValidationMessageFor(model => model.ContactNo)
+        </div>
+        <p>
+            <input type="submit" value="Update" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to home", "Index")
+</div>

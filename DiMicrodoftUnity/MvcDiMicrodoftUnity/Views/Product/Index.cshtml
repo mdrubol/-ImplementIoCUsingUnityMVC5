@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MvcDiMicrodoftUnity.Product>
+@{
+    ViewBag.Title = "Web Grid";
+    WebGrid grid = new WebGrid(source: Model, rowsPerPage: 5, canPage: true);
+}
+<h2>
+    Web Grid</h2>
+
+@grid.GetHtml(
+    fillEmptyRows: false,
+    alternatingRowStyle: "alternate-row",
+    headerStyle: "grid-header",
+    footerStyle: "grid-footer",
+    mode: WebGridPagerModes.All,
+            firstText: "<< First",
+            previousText: "< Prev",
+            nextText: "Next >",
+            lastText: "Last >>",
+    columns: new[] {
+        
+        grid.Column("ID", 
+                    header: "Product ID", canSort: false),
+        grid.Column("Name", 
+                    header: "Name",
+                    format: @<text>
+                       @Html.ActionLink((string)item.Name, "View", new { id = item.ID })</text>
+                    ),
+        grid.Column("Category"),
+        grid.Column("Price", 
+                    header: "Price"
+        ),
+         @*grid.Column("", 
+                    header: "Actions",
+                    format: @<text>
+@if (item.ContactNo == null) 
+                    { 
+    @Html.ActionLink("Edit", "Edit", new { id = item.CustID }) <text>|</text>
+    
+                    }
+@Html.ActionLink("Delete", "WebGridDelete", new { id = item.CustID }, new { onclick = "return confirm('Do you wish to delete this customer ??');" })
+</text>
+        )*@
+})

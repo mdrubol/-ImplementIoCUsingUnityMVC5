@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcDiMicrodoftUnity", "MvcDiMicrodoftUnity\MvcDiMicrodoftUnity.csproj", "{9CA1B316-0AFA-462F-96AA-F0329BDD25CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcDiMicrodoftUnity.Tests", "MvcDiMicrodoftUnity.Tests\MvcDiMicrodoftUnity.Tests.csproj", "{AA2F576C-EA2D-48B5-B3A9-E137E84B670B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CA1B316-0AFA-462F-96AA-F0329BDD25CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CA1B316-0AFA-462F-96AA-F0329BDD25CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CA1B316-0AFA-462F-96AA-F0329BDD25CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CA1B316-0AFA-462F-96AA-F0329BDD25CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA2F576C-EA2D-48B5-B3A9-E137E84B670B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA2F576C-EA2D-48B5-B3A9-E137E84B670B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA2F576C-EA2D-48B5-B3A9-E137E84B670B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA2F576C-EA2D-48B5-B3A9-E137E84B670B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

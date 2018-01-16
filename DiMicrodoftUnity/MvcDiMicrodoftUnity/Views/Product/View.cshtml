@@ -1,0 +1,40 @@
+﻿@model MvcDiMicrodoftUnity.Product
+@{
+    ViewBag.Title = "View";
+}
+<h2>View</h2>
+
+@using (Html.BeginForm())
+{
+    
+    <fieldset>
+        <legend>Person</legend>
+        @Html.HiddenFor(model => model.Id)
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayTextFor(model => model.Name)
+
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Category)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayTextFor(model => model.Category)
+
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Price)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayTextFor(model => model.Price)
+
+        </div>
+
+
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to home", "Index")
+</div>
